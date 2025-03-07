@@ -1,0 +1,14 @@
+SELECT 
+    id,  
+    first_name,
+    last_name,
+    LOWER(email) AS email,
+    CASE 
+        WHEN gender = 'Male' THEN 'M' 
+        WHEN gender = 'Female' THEN 'F' 
+        ELSE NULL 
+    END AS gender,
+    joining_date,
+    CONCAT(first_name, ' ', last_name) AS full_name
+FROM curated.stg_person_details
+WHERE email IS NOT NULL;
