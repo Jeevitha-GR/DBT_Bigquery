@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE `bigquery-poc-443509`.`staging`.`stg_person_details`
+CREATE OR REPLACE TABLE bigquery-poc-443509.staging.stg_person_details
 AS 
 WITH stg_person_details AS (
     SELECT 
@@ -13,6 +13,6 @@ WITH stg_person_details AS (
         END AS gender,
         joining_date,
         CONCAT(first_name, ' ', last_name) AS full_name
-    FROM `bigquery-poc-443509`.`curated`.`stg_person_details`
+    FROM bigquery-poc-443509.curated.stg_person_details
 )
 SELECT * FROM stg_person_details;
