@@ -11,7 +11,7 @@ SELECT
     END AS gender,
     joining_date,
     CONCAT(first_name, ' ', last_name) AS full_name
-    FROM curated.stg_person_details
+    FROM stg_person_details
 )
 
 SELECT * FROM stg_person_details;
