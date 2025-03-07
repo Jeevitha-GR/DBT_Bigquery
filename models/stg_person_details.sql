@@ -10,4 +10,4 @@ SELECT
     END AS gender,
     joining_date,
     CONCAT(first_name, ' ', last_name) AS full_name
-    FROM bigquery-poc-443509.curated.stg_person_details;
+FROM `bigquery-poc-443509`.`curated`.`stg_person_details`
