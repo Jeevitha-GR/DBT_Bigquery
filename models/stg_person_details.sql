@@ -1,5 +1,3 @@
-CREATE OR REPLACE TABLE bigquery-poc-443509.staging.stg_person_details
-AS 
 WITH stg_person_details AS (
     SELECT 
         id,  
